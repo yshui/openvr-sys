@@ -1,0 +1,26 @@
+[package]
+name = "openvr-sys2"
+description = "Raw bindings to OpenVR (incomplete)"
+license = "MIT"
+keywords = ["vr", "openvr", "steamvr"]
+categories = [ "hardware-support", "external-ffi-bindings" ]
+repository = "https://github.com/yshui/openvr-sys"
+
+version = "0.1.0"
+edition = "2021"
+
+exclude = [
+    "third-party/openvr/samples/*",
+    "third-party/openvr/bin/*",
+    "third-party/openvr/lib/*",
+    "third-party/openvr/controller_callouts/*",
+]
+
+[dependencies]
+cxx = "1.0.94"
+autocxx = "0.25.0"
+nalgebra = "0.32.0"
+num = "0.4.0"
+
+[build-dependencies]
+autocxx-build = "0.25.0"
