@@ -1,5 +1,6 @@
 [package]
 name = "openvr-sys2"
+authors = [ "Yuxuan Shui <yshuiv7@gmail.com>" ]
 description = "Raw bindings to OpenVR (incomplete)"
 license = "MIT"
 keywords = ["vr", "openvr", "steamvr"]
