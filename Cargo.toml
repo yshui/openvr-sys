@@ -19,9 +19,9 @@ exclude = [
 
 [dependencies]
 cxx = "1.0.94"
-autocxx = "0.25.0"
+autocxx = "0.26.0"
 nalgebra = "0.32.0"
 num = "0.4.0"
 
 [build-dependencies]
-autocxx-build = "0.25.0"
+autocxx-build = "0.26.0"
