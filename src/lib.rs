@@ -189,6 +189,16 @@ impl std::fmt::Debug for ETrackedPropertyError {
     }
 }
 
+impl ETrackedPropertyError {
+    pub fn into_result(self) -> Result<(), Self> {
+        if self == ETrackedPropertyError::TrackedProp_Success {
+            Ok(())
+        } else {
+            Err(self)
+        }
+    }
+}
+
 impl EVRInitError {
     pub fn into_result(self) -> Result<(), Self> {
         if self == EVRInitError::VRInitError_None {
