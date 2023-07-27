@@ -189,6 +189,12 @@ impl std::fmt::Debug for ETrackedPropertyError {
     }
 }
 
+impl std::fmt::Display for ETrackedPropertyError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        <Self as std::fmt::Debug>::fmt(self, f)
+    }
+}
+
 impl ETrackedPropertyError {
     pub fn into_result(self) -> Result<(), Self> {
         if self == ETrackedPropertyError::TrackedProp_Success {
@@ -198,6 +204,8 @@ impl ETrackedPropertyError {
         }
     }
 }
+
+impl std::error::Error for ETrackedPropertyError {}
 
 impl EVRInitError {
     pub fn into_result(self) -> Result<(), Self> {
